@@ -24,9 +24,6 @@ export default class FormHandler extends Component {
   }
 
   handleSubmit(event) {
-    //   console.log(this.allIds);
-    // let allIds = [this.state.id, this.allIds];
-    // console.log("allIds ", allIds);
     event.preventDefault();
     alert("Product Added");
     let obj = {
@@ -95,7 +92,7 @@ export default class FormHandler extends Component {
               onChange={this.onFieldChange}
               type="text"
               className="form-control mb-4"
-              placeholder="Enter Image URL"
+              placeholder="Enter Image URL "
               validators={["required", "isString"]}
             />
 
@@ -117,8 +114,8 @@ export default class FormHandler extends Component {
               onChange={this.onFieldChange}
               type="text"
               className="form-control mb-4"
-              placeholder="Enter Description"
-              validators={["required", "isString", "minStringLength:20"]}
+              placeholder="Enter Product Description"
+              validators={["isString", "minStringLength:20"]}
             />
             <div className="row">
               <div className="col-2">
